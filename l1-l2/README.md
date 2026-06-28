@@ -19,8 +19,8 @@ https://www.digitalocean.com/community/tutorials/how-to-install-go-on-ubuntu-20-
 ## Seting up an Editor
 
 1. In your IDE of choice, we highly encourage VS Code, go to extensions (left hand side
-bar) and search Go and download.
-2. In VS Code, install the Code Runner extension (same technique). You can use this or
+bar) and search `Go` and download.
+2. In VS Code, install the `Code Runner` extension (same technique). You can use this or
 the command line to run your programs.
 3. In VS Code, you might have to “trust your project” in order to get the little run carrots.
 
