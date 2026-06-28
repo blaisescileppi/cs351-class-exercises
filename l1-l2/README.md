@@ -195,3 +195,9 @@ Notice, we have a line `time.Sleep(2 * time.Second)` which just tells the main t
 
 In future lessons, we will use better methods to **synchronize** multiple threads of execution.
 
+## Submit
+
+Remember to submit any files you have to **Gradescope**.
+
+These exercises are graded for participation and proof of effort, not correctness!
+
