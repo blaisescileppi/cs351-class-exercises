@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/rpc"
 )
@@ -21,10 +22,13 @@ func main() {
 	}
 
 	// First send one move to the server
-	move := Move{
-		Color: 0, // 0 means White
-		Col:   3, // column 3
-	}
+	var move Move
+
+	fmt.Print("Enter color (0 = White, 1 = Black): ")
+	fmt.Scan(&move.Color)
+
+	fmt.Print("Enter column (0-6): ")
+	fmt.Scan(&move.Col)
 
 	var replyMove int
 
