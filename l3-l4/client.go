@@ -20,12 +20,29 @@ func main() {
 		log.Fatal("dialing:", err)
 	}
 
-	// Synchronous call
+	// First send one move to the server
+	move := Move{
+		Color: 0, // 0 means White
+		Col:   3, // column 3
+	}
+
+	var replyMove int
+
+	err = client.Call("ConnectGame.Move", &move, &replyMove)
+	if err != nil {
+		log.Fatal("move error:", err)
+	}
+
+	log.Printf("Move reply: %v", replyMove)
+
+	// Then ask the server for the board
 	var reply Board
 	var args int
+
 	err = client.Call("ConnectGame.Get", &args, &reply)
 	if err != nil {
 		log.Fatal("game error:", err)
 	}
-	log.Printf("Game: %v", reply)
+
+	log.Printf("Game:\n%v", reply.BoardString)
 }
